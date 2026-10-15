@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevoltConvert -  EZ Professional File Conversion</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="homepage/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo-link">
+                <img src="assets/RevoltConvert.png" alt="RevoltConvert Logo" class="logo">
+                <span class="brand-name">RevoltConvert</span>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">Converter</a>
+            <a href="pricing.html" class="nav-item pricing-link">Pricing</a>
+            <a href="faq.html" class="nav-item">FAQ</a>
+            <a href="privacy.html" class="nav-item">Privacy Policy</a>
+            <a href="about.html" class="nav-item">About</a>
+        </nav>
+        <div class="nav-right">
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+                <i data-lucide="moon" class="theme-icon"></i>
+            </button>
+            <button id="login-btn" class="btn btn-outline">Log In</button>
+            <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section id="convert" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Convert Your Files Instantly</h1>
+                <p class="hero-subtitle">Fast, secure, and professional client-side file conversion for all your needs.</p>
+            </div>
+
+            <div class="converter-box">
+                <div class="converter-header">
+                    <div class="format-selection">
+                        <label for="output-format">Convert to:</label>
+                        <select id="output-format" class="format-select">
+                            <option value="pdf">PDF (.pdf)</option>
+                            <option value="png">PNG Image (.png)</option>
+                            <option value="jpg">JPEG Image (.jpg)</option>
+                            <option value="webp">WebP Image (.webp)</option>
+                            <option value="txt">Plain Text (.txt)</option>
+                            <option value="json">JSON (.json)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="drop-zone" class="drop-zone">
+                    <div class="drop-zone-content">
+                        <i data-lucide="upload-cloud" class="upload-icon"></i>
+                        <h3>Drag & Drop your files here</h3>
+                        <p>or</p>
+                        <button id="upload-trigger" class="btn btn-red-solid">Choose File(s)</button>
+                        <input type="file" id="file-input" multiple style="display: none;">
+                        <span class="file-hint">Supports Images, Documents, Text, and Code files</span>
+                    </div>
+                </div>
+
+                <div id="file-list-container" class="file-list-container" style="display: none;">
+                    <h4>Selected Files</h4>
+                    <div id="file-list" class="file-list"></div>
+                    <div class="converter-actions">
+                        <button id="clear-all" class="btn btn-outline">Clear All</button>
+                        <button id="start-conversion" class="btn btn-red-solid">Convert Files</button>
+                    </div>
+                </div>
+
+                <div id="progress-container" class="progress-container" style="display: none;">
+                    <div class="progress-status">
+                        <span id="progress-text">Converting files...</span>
+                        <span id="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </div>
+
+                <div id="result-container" class="result-container" style="display: none;">
+                    <div class="success-banner">
+                        <i data-lucide="check-circle" class="success-icon"></i>
+                        <span>Conversion Complete!</span>
+                    </div>
+                    <div id="download-list" class="download-list"></div>
+                    <button id="convert-more" class="btn btn-outline">Convert More Files</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="auth-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn"><i data-lucide="x"></i></button>
+            <h2 id="modal-title">Log In to RevoltConvert</h2>
+            <form id="auth-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="modal-email">Email Address</label>
+                    <input type="email" id="modal-email" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="modal-password">Password</label>
+                    <input type="password" id="modal-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" id="modal-submit" class="btn btn-red-solid full-width">Log In</button>
+            </form>
+            <div class="modal-switch">
+                <span id="switch-text">Don't have an account?</span>
+                <a href="#" id="switch-mode">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 RevoltConvert. All rights reserved.</p>
+    </footer>
+
+    <script src="homepage/script.js"></script>
+</body>
+</html>
