@@ -226,12 +226,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateModalMode() {
         if (isLoginMode) {
-            modalTitle.textContent = 'Log In to RevoltConvert';
+            modalTitle.textContent = 'Log In to Uvert';
             modalSubmit.textContent = 'Log In';
             switchText.textContent = "Don't have an account?";
             switchMode.textContent = 'Sign Up';
         } else {
-            modalTitle.textContent = 'Create a RevoltConvert Account';
+            modalTitle.textContent = 'Create a Uvert Account';
             modalSubmit.textContent = 'Sign Up';
             switchText.textContent = 'Already have an account?';
             switchMode.textContent = 'Log In';
